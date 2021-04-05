@@ -113,6 +113,10 @@ The available options are:
 History Log
 =============
 
+- 1.0.1 -- 2021-04-05
+
+  - fix select options not synced with pane at init
+  
 - 1.0.0 -- 2021-04-05
 
     - initial commit

@@ -49,6 +49,17 @@ if ('undefined' === typeof SelectHide) {
 
 
                     //----------------------------------------
+                    // MAKE SURE THE OPTIONS AND OPEN PANE ARE SYNC AT INIT
+                    //----------------------------------------
+                    if (null !== openPane) {
+                        var jInitOption = jContext.find('.select-hide option[data-target="' + openPane + '"]');
+                        if (jInitOption.length) {
+                            jInitOption.prop('selected', true);
+                        }
+                    }
+
+
+                    //----------------------------------------
                     // LISTENING
                     //----------------------------------------
                     jContext.on('change.selectHide', ".select-hide", function () {
